@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Lexend", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #144af1;
+  --color-primary-container: #2e5bff;
+  --color-surface: #f8f9fb;
+  --color-surface-container-low: #f0f4f7;
+  --color-surface-container-high: #e3e9ed;
+  --color-surface-container-highest: #dce4e8;
+  --color-on-surface: #2c3437;
+  --color-on-surface-variant: #596064;
+  --color-secondary-container: #d0e5fd;
+  --color-on-secondary-container: #405468;
+  --color-tertiary-container: #e7c6f4;
+  --color-on-tertiary-container: #573e64;
+  --color-error: #BA1A1A;
+  --color-on-error: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
